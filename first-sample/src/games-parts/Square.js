@@ -1,13 +1,13 @@
 import React from 'react';
 
-import '../index.css'
+import '../index.css';
 
-export class Square extends React.Component {
+export default class Square extends React.Component {
     render() {
-      return (
-        <button className="square">
-          {/* TODO */}
-        </button>
-      );
+        return (
+            <button className="square">
+                {/* TODO */}
+            </button>
+        );
     }
-  }
+}
