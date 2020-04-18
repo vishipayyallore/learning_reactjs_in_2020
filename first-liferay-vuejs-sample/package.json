@@ -1,23 +1,47 @@
 {
-  "name": "first-liferay-vuejs-sample",
-  "version": "1.0.1",
-  "description": "Simple LifeRay, Vue.js Application",
-  "main": "index.common",
-  "scripts": {
-    "build": "babel --source-maps -d build src && vue-cli-service build --dest build/ --formats commonjs --target lib --name index ./src/index.js && npm run copy-assets && liferay-npm-bundler",
-    "copy-assets": "lnbs-copy-assets",
-    "translate": "lnbs-translate",
-    "deploy": "npm run build && lnbs-deploy",
-    "start": "lnbs-start"
-  },
-  "author": "Viswanatha Swamy",
-  "license": "ISC",
-  "dependencies": {
-    "@vue/cli-plugin-eslint": "^4.3.1",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.3.1"
-  }
+    "name": "first-liferay-vuejs-sample",
+    "version": "1.0.1",
+    "description": "Simple LifeRay, Vue.js Application",
+    "main": "index.common",
+    "scripts": {
+        "build": "babel --source-maps -d build src && vue-cli-service build --dest build/ --formats commonjs --target lib --name index ./src/index.js && npm run copy-assets && liferay-npm-bundler",
+        "copy-assets": "lnbs-copy-assets",
+        "translate": "lnbs-translate",
+        "deploy": "npm run build && lnbs-deploy",
+        "start": "lnbs-start"
+    },
+    "author": "Viswanatha Swamy",
+    "license": "ISC",
+    "dependencies": {
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.3.1",
+        "@vue/cli-plugin-eslint": "^4.3.1",
+        "@vue/cli-service": "^4.3.1",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.8.0",
+        "eslint-plugin-vue": "^6.2.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
 }
